@@ -1,4 +1,6 @@
 /* eslint-disable max-len */
+const MAX_VARIABLES_AMOUNT = 15;
+
 
 const en = {
   start: () => `Hi! I'm a bot that tests .attheme's for potentional issues. Just send me one!`,
@@ -20,10 +22,22 @@ If you like me, tell my hoster @snejugal about it. If not, tell him why you don'
   rules: {
     "purple-variables": (variables) => `*Warning: Purple variables*
 Porting a theme with @themesporterbot, it may leave some variables in purple if it doesn't know an equivalent variable in the desktop theme. Make sure that these variables must be \`#ff00ff\`, if not, fix them.
-${variables.map((variable) => `• \`${variable}\``).join(`\n`)}\n\n`,
+${variables
+    .slice(0, MAX_VARIABLES_AMOUNT)
+    .map((variable) => `• \`${variable}\``)
+    .join(`\n`)}
+${variables.length > MAX_VARIABLES_AMOUNT
+    ? `…and ${variables.length - MAX_VARIABLES_AMOUNT} more variables\n`
+    : ``}\n`,
     "invisible-elements": (variables) => `*Error: Invisible elements*
 You have some elements that are invisible in your theme but are really important. You must fix these as soon as possible.
-${variables.map((variable) => `• \`${variable}\``).join(`\n`)}\n\n`,
+${variables
+    .slice(0, MAX_VARIABLES_AMOUNT)
+    .map((variable) => `• \`${variable}\``)
+    .join(`\n`)}
+${variables.length > MAX_VARIABLES_AMOUNT
+    ? `…and ${variables.length - MAX_VARIABLES_AMOUNT} more variables\n`
+    : ``}\n`,
   },
 };
 
