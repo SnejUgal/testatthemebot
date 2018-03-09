@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "attheme-js": "^1.1.1",
-    "attheme-rules": "^0.1.0",
+    "attheme-rules": "latest",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
     "telegraf": "^3.19.0"
