@@ -1,0 +1,24 @@
+{
+  "name": "testatthemebot",
+  "version": "1.0.0",
+  "description": "Bot for testing .attheme files for potentional rules.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "github.com/snejugal/testatthemebot"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "attheme"
+  ],
+  "author": "SnejUgal <contact@snejugal.ru> (snejugal.ru)",
+  "license": "MIT",
+  "dependencies": {
+    "attheme-js": "^1.1.1",
+    "attheme-rules": "^0.1.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "telegraf": "^3.19.0"
+  }
+}
