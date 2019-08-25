@@ -15,10 +15,10 @@
   "author": "SnejUgal <contact@snejugal.ru> (snejugal.ru)",
   "license": "MIT",
   "dependencies": {
-    "attheme-js": "^1.1.1",
+    "attheme-js": "^1.1.2",
     "attheme-rules": "latest",
-    "request": "^2.83.0",
-    "request-promise": "^4.2.2",
-    "telegraf": "^3.19.0"
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "telegraf": "^3.32.0"
   }
 }
